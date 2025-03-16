@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8; /* لون خلفية هادئ */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* التأكد من أن الصفحة تأخذ الارتفاع الكامل */
+    overflow: hidden; /* منع التمرير الأفقي */
+}
+
+.container {
+    background-color: #ffffff; /* خلفية بيضاء */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* ظل ناعم */
+    width: 90%; /* عرض أقل قليلاً من الشاشة */
+    max-width: 400px; /* حد أقصى للعرض */
+    text-align: center;
+    margin: 10px; /* إضافة هامش صغير */
+}
+
+.alarm-page {
+    display: none;
+    background-color: #ffffff; /* خلفية بيضاء */
+    animation: pulse 1.5s infinite;
+    width: 90%; /* عرض أقل قليلاً من الشاشة */
+    max-width: 400px; /* حد أقصى للعرض */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* ظل ناعم */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.difficulty-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.btn-warning {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: #ff6b6b; /* لون أحمر هادئ */
+    border: none;
+    color: white; /* نص أبيض */
+    border-radius: 8px; /* زوايا دائرية */
+    transition: background-color 0.3s ease; /* تأثير انتقالي */
+}
+
+.btn-warning:hover {
+    background-color: #ff4757; /* لون أحمر داكن عند التمرير */
+}
+
+.btn-primary {
+    background-color: #4a90e2; /* لون أزرق هادئ */
+    border: none;
+    color: white; /* نص أبيض */
+    border-radius: 8px; /* زوايا دائرية */
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease; /* تأثير انتقالي */
+}
+
+.btn-primary:hover {
+    background-color: #357abd; /* لون أزرق داكن عند التمرير */
+}
+
+.btn-danger {
+    background-color: #ff6b6b; /* لون أحمر هادئ */
+    border: none;
+    color: white; /* نص أبيض */
+    border-radius: 8px; /* زوايا دائرية */
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease; /* تأثير انتقالي */
+}
+
+.btn-danger:hover {
+    background-color: #ff4757; /* لون أحمر داكن عند التمرير */
+}
+
+.question-box {
+    border: 2px solid #e0e6ed; /* لون حدود فاتح */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa; /* لون خلفية فاتح */
+}
+
+.text-success { color: #28a745; }
+.text-warning { color: #ffc107; }
+.text-danger { color: #dc3545; }
+
+.lead {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: #333; /* لون نص داكن */
+}
+
+#feedback-message {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333; /* لون نص داكن */
+}
+
+#remaining-attempts {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* تصميم مناسب للهواتف */
+@media (max-width: 600px) {
+    .container {
+        width: 95%; /* عرض أكبر قليلاً على الهواتف */
+        border-radius: 15px;
+        padding: 20px;
+        margin: 10px; /* إضافة هامش صغير */
+    }
+
+    .alarm-page {
+        width: 95%; /* عرض أكبر قليلاً على الهواتف */
+        padding: 20px;
+    }
+
+    .btn-warning {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .question-box {
+        padding: 10px;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+}
